@@ -29,7 +29,7 @@ jobs:
     env:
       libraryName: ns-3-dev-git
       cmakeInstallationPath: ns-3-dev-git-installation
-      tagName: <span style="color: red">HttpError: Not Found<span><br>
+      tagName: ns-3.47
     steps:
     
       - uses: actions/checkout@v4
