@@ -28,7 +28,6 @@ jobs:
     runs-on: windows-latest
     env:
       libraryName: ns-3-dev-git
-      cmakeInstallationPath: ns-3-dev-git-installation
       tagName: ns-3.47
     steps:
     
@@ -132,12 +131,12 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          directory: "${{ env.libraryName }}/cmake-build/${{ env.cmakeInstallationPath }}"
+          directory: "${{ env.libraryName }}/cmake-build"
           filename: "${{ env.libraryName }}-${{ github.ref_name }}-${{ matrix.compiler.name }}.zip"
         
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "${{ env.libraryName }}/cmake-build/${{ env.cmakeInstallationPath }}/${{ env.libraryName }}-${{ github.ref_name }}-${{ matrix.compiler.name }}.zip"
+          artifacts: "${{ env.libraryName }}/cmake-build/${{ env.libraryName }}-${{ github.ref_name }}-${{ matrix.compiler.name }}.zip"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
