@@ -115,7 +115,7 @@ jobs:
             set CD_LINUX=%CD:\=/%
             gcc --version &&^
             cd ${{ env.libraryName }} &&^
-            python .\ns3 configure --enable-examples --enable-tests --out=cmake-build &&^
+            python .\ns3 configure -G"MinGW Makefiles" --enable-examples --enable-tests --out=cmake-build &&^
             python .\ns3 build
             
   # cmake.exe -LH -G"MinGW Makefiles" ^
