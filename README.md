@@ -14,3 +14,6 @@ https://www.nsnam.org/releases/ns-3.47.tar.bz2
 ```
 ### Playground
 - [dirkarnez/ns-3-dev-git-playground](https://github.com/dirkarnez/ns-3-dev-git-playground)
+
+### Tutorials
+- [NS3 Network Simulator - YouTube](https://www.youtube.com/playlist?list=PLkruFy_9uWi1v3kvhQQ90ad6IFGHDuCeR)
